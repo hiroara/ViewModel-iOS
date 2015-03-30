@@ -1,0 +1,14 @@
+PODS:
+  - ViewModel (0.0.1)
+
+DEPENDENCIES:
+  - ViewModel (from `./`)
+
+EXTERNAL SOURCES:
+  ViewModel:
+    :path: "./"
+
+SPEC CHECKSUMS:
+  ViewModel: 5f86859de7d2744d991f4db4bce5120e73438f68
+
+COCOAPODS: 0.36.1

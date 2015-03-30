@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ViewModel
 
 class Model {
     var title: String

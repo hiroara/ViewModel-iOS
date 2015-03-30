@@ -8,19 +8,19 @@
 
 import UIKit
 
-@objc protocol VMViewModel {
+@objc public protocol VMViewModel {
     var nibName: String { get }
     init(model: AnyObject)
     func reload() -> Self
     func apply() -> AnyObject
 }
 
-@objc protocol VMView {
+@objc public protocol VMView {
     func reload() -> Self
     var viewModel: VMViewModel? { get set }
 }
 
-struct VMComposer<C: UIViewController> {
+public struct VMComposer<C: UIViewController> {
     func composeWith(#viewModel: VMViewModel) -> C {
         let controller = C(nibName: viewModel.nibName, bundle: nil)
         controller.viewModel = viewModel
@@ -28,7 +28,7 @@ struct VMComposer<C: UIViewController> {
     }
 }
 
-extension UIViewController {
+public extension UIViewController {
     var viewModel: VMViewModel? {
         get { return (self.view as VMView).viewModel }
         set { (self.view as VMView).viewModel = newValue }
