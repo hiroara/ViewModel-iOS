@@ -17,18 +17,13 @@ Pod::Spec.new do |s|
 
   s.name         = "ViewModel"
   s.version      = "0.0.1"
-  s.summary      = "A short description of ViewModel."
+  s.summary      = "Library for MVC-ViewModel implementation on iOS application."
 
   s.description  = <<-DESC
-                   A longer description of ViewModel in Markdown format.
-
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+                   Library for MVC-ViewModel implementation on iOS application.
                    DESC
 
-  s.homepage     = "http://EXAMPLE/ViewModel"
+  s.homepage     = "https://github.com/hiroara/ViewModel-iOS"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -78,7 +73,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/hiroara/iOS-ViewModel.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/hiroara/ViewModel-iOS.git", :tag => "0.0.1" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
