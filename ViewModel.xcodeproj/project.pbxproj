@@ -13,6 +13,8 @@
 		F51A4E3F1AC8FA400050E5BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51A4E3E1AC8FA400050E5BD /* Images.xcassets */; };
 		F51A4E421AC8FA400050E5BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F51A4E401AC8FA400050E5BD /* LaunchScreen.xib */; };
 		F51A4E4E1AC8FA400050E5BD /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A4E4D1AC8FA400050E5BD /* ViewModelTests.swift */; };
+		F5B6EB401AC8FB09001ECD51 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B6EB3F1AC8FB09001ECD51 /* ViewModel.swift */; };
+		F5B6EB421AC8FC77001ECD51 /* BoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B6EB411AC8FC77001ECD51 /* BoxView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		F51A4E471AC8FA400050E5BD /* ViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51A4E4C1AC8FA400050E5BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F51A4E4D1AC8FA400050E5BD /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		F5B6EB3F1AC8FB09001ECD51 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		F5B6EB411AC8FC77001ECD51 /* BoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,14 @@
 		F51A4E341AC8FA400050E5BD /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F5B6EB3F1AC8FB09001ECD51 /* ViewModel.swift */,
 				F51A4E371AC8FA400050E5BD /* AppDelegate.swift */,
 				F51A4E391AC8FA400050E5BD /* ViewController.swift */,
 				F51A4E3B1AC8FA400050E5BD /* Main.storyboard */,
 				F51A4E3E1AC8FA400050E5BD /* Images.xcassets */,
 				F51A4E401AC8FA400050E5BD /* LaunchScreen.xib */,
 				F51A4E351AC8FA400050E5BD /* Supporting Files */,
+				F5B6EB411AC8FC77001ECD51 /* BoxView.xib */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B6EB421AC8FC77001ECD51 /* BoxView.xib in Resources */,
 				F51A4E3D1AC8FA400050E5BD /* Main.storyboard in Resources */,
 				F51A4E421AC8FA400050E5BD /* LaunchScreen.xib in Resources */,
 				F51A4E3F1AC8FA400050E5BD /* Images.xcassets in Resources */,
@@ -213,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F51A4E3A1AC8FA400050E5BD /* ViewController.swift in Sources */,
+				F5B6EB401AC8FB09001ECD51 /* ViewModel.swift in Sources */,
 				F51A4E381AC8FA400050E5BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +415,7 @@
 				F51A4E531AC8FA400050E5BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F51A4E541AC8FA400050E5BD /* Build configuration list for PBXNativeTarget "ViewModelTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +424,7 @@
 				F51A4E561AC8FA400050E5BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
