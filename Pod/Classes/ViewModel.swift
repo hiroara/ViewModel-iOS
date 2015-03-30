@@ -21,7 +21,8 @@ import UIKit
 }
 
 public struct VMComposer<C: UIViewController> {
-    func composeWith(#viewModel: VMViewModel) -> C {
+    public init() {}
+    public func composeWith(#viewModel: VMViewModel) -> C {
         let controller = C(nibName: viewModel.nibName, bundle: nil)
         controller.viewModel = viewModel
         return controller

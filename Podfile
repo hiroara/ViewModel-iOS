@@ -3,8 +3,9 @@
 
 use_frameworks!
 
-target 'ViewModel' do
-  pod 'ViewModel', path: './'
+pod 'ViewModel', path: './'
+
+target 'ViewModelDemo' do
 end
 
 target 'ViewModelTests' do

@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8FC6DCF8F1AC702CDBFDC998 /* Pods_ViewModel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A41CF1974FF549B4B99170E3 /* Pods_ViewModel.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F51A4E381AC8FA400050E5BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A4E371AC8FA400050E5BD /* AppDelegate.swift */; };
-		F51A4E3A1AC8FA400050E5BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A4E391AC8FA400050E5BD /* ViewController.swift */; };
-		F51A4E3D1AC8FA400050E5BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F51A4E3B1AC8FA400050E5BD /* Main.storyboard */; };
-		F51A4E3F1AC8FA400050E5BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F51A4E3E1AC8FA400050E5BD /* Images.xcassets */; };
-		F51A4E421AC8FA400050E5BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F51A4E401AC8FA400050E5BD /* LaunchScreen.xib */; };
+		B6C1D9358C6DE09EAD186D2B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F1AA6666F7B45E5B0AFEC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F51A4E4E1AC8FA400050E5BD /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A4E4D1AC8FA400050E5BD /* ViewModelTests.swift */; };
-		F5B6EB421AC8FC77001ECD51 /* BoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5B6EB411AC8FC77001ECD51 /* BoxView.xib */; };
+		F565ED2C1AC92D6B003009C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F565ED281AC92D6B003009C4 /* AppDelegate.swift */; };
+		F565ED2D1AC92D6B003009C4 /* BoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F565ED291AC92D6B003009C4 /* BoxView.xib */; };
+		F565ED2E1AC92D6B003009C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F565ED2A1AC92D6B003009C4 /* Images.xcassets */; };
+		F565ED2F1AC92D6B003009C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F565ED2B1AC92D6B003009C4 /* ViewController.swift */; };
+		F565ED311AC92DCD003009C4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F565ED301AC92DCD003009C4 /* Info.plist */; };
+		F565ED341AC92E3E003009C4 /* Pods.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F565ED321AC92E3E003009C4 /* Pods.debug.xcconfig */; };
+		F565ED351AC92E3E003009C4 /* Pods.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F565ED331AC92E3E003009C4 /* Pods.release.xcconfig */; };
+		F565ED411AC93230003009C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F565ED3B1AC93226003009C4 /* LaunchScreen.xib */; };
+		F565ED421AC93230003009C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F565ED3D1AC93226003009C4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,20 +31,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3759363DA54D9362D8DCF87F /* Pods-ViewModel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewModel.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViewModel/Pods-ViewModel.release.xcconfig"; sourceTree = "<group>"; };
+		244F1AA6666F7B45E5B0AFEC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41CF1974FF549B4B99170E3 /* Pods_ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF40CE2110C0DA4CC969EB58 /* Pods-ViewModel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewModel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViewModel/Pods-ViewModel.debug.xcconfig"; sourceTree = "<group>"; };
-		F51A4E321AC8FA400050E5BD /* ViewModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F51A4E361AC8FA400050E5BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F51A4E371AC8FA400050E5BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F51A4E391AC8FA400050E5BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F51A4E3C1AC8FA400050E5BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F51A4E3E1AC8FA400050E5BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		F51A4E411AC8FA400050E5BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F51A4E321AC8FA400050E5BD /* ViewModelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewModelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51A4E471AC8FA400050E5BD /* ViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51A4E4C1AC8FA400050E5BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F51A4E4D1AC8FA400050E5BD /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
-		F5B6EB411AC8FC77001ECD51 /* BoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BoxView.xib; sourceTree = "<group>"; };
+		F565ED241AC92D39003009C4 /* Pods-ViewModelDemo.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ViewModelDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViewModelDemo/Pods-ViewModelDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		F565ED251AC92D39003009C4 /* Pods-ViewModelDemo.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ViewModelDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViewModelDemo/Pods-ViewModelDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F565ED281AC92D6B003009C4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ViewModelDemo/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		F565ED291AC92D6B003009C4 /* BoxView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BoxView.xib; path = ViewModelDemo/BoxView.xib; sourceTree = SOURCE_ROOT; };
+		F565ED2A1AC92D6B003009C4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ViewModelDemo/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		F565ED2B1AC92D6B003009C4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewModelDemo/ViewController.swift; sourceTree = SOURCE_ROOT; };
+		F565ED301AC92DCD003009C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ViewModelDemo/Info.plist; sourceTree = SOURCE_ROOT; };
+		F565ED321AC92E3E003009C4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F565ED331AC92E3E003009C4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F565ED3C1AC93226003009C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F565ED3E1AC93226003009C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FC6DCF8F1AC702CDBFDC998 /* Pods_ViewModel.framework in Frameworks */,
+				B6C1D9358C6DE09EAD186D2B /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,8 +72,10 @@
 		40DA0D926C6D8A8B599068AB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BF40CE2110C0DA4CC969EB58 /* Pods-ViewModel.debug.xcconfig */,
-				3759363DA54D9362D8DCF87F /* Pods-ViewModel.release.xcconfig */,
+				F565ED321AC92E3E003009C4 /* Pods.debug.xcconfig */,
+				F565ED331AC92E3E003009C4 /* Pods.release.xcconfig */,
+				F565ED241AC92D39003009C4 /* Pods-ViewModelDemo.debug.xcconfig */,
+				F565ED251AC92D39003009C4 /* Pods-ViewModelDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -76,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				A41CF1974FF549B4B99170E3 /* Pods_ViewModel.framework */,
+				244F1AA6666F7B45E5B0AFEC /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,7 +92,7 @@
 		F51A4E291AC8FA400050E5BD = {
 			isa = PBXGroup;
 			children = (
-				F51A4E341AC8FA400050E5BD /* ViewModel */,
+				F51A4E341AC8FA400050E5BD /* ViewModelDemo */,
 				F51A4E4A1AC8FA400050E5BD /* ViewModelTests */,
 				F51A4E331AC8FA400050E5BD /* Products */,
 				40DA0D926C6D8A8B599068AB /* Pods */,
@@ -94,30 +103,30 @@
 		F51A4E331AC8FA400050E5BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F51A4E321AC8FA400050E5BD /* ViewModel.app */,
+				F51A4E321AC8FA400050E5BD /* ViewModelDemo.app */,
 				F51A4E471AC8FA400050E5BD /* ViewModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F51A4E341AC8FA400050E5BD /* ViewModel */ = {
+		F51A4E341AC8FA400050E5BD /* ViewModelDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F51A4E371AC8FA400050E5BD /* AppDelegate.swift */,
-				F51A4E391AC8FA400050E5BD /* ViewController.swift */,
-				F51A4E3B1AC8FA400050E5BD /* Main.storyboard */,
-				F51A4E3E1AC8FA400050E5BD /* Images.xcassets */,
-				F51A4E401AC8FA400050E5BD /* LaunchScreen.xib */,
+				F565ED3B1AC93226003009C4 /* LaunchScreen.xib */,
+				F565ED3D1AC93226003009C4 /* Main.storyboard */,
+				F565ED281AC92D6B003009C4 /* AppDelegate.swift */,
+				F565ED291AC92D6B003009C4 /* BoxView.xib */,
+				F565ED2A1AC92D6B003009C4 /* Images.xcassets */,
+				F565ED2B1AC92D6B003009C4 /* ViewController.swift */,
 				F51A4E351AC8FA400050E5BD /* Supporting Files */,
-				F5B6EB411AC8FC77001ECD51 /* BoxView.xib */,
 			);
-			path = ViewModel;
+			path = ViewModelDemo;
 			sourceTree = "<group>";
 		};
 		F51A4E351AC8FA400050E5BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				F51A4E361AC8FA400050E5BD /* Info.plist */,
+				F565ED301AC92DCD003009C4 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -142,9 +151,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F51A4E311AC8FA400050E5BD /* ViewModel */ = {
+		F51A4E311AC8FA400050E5BD /* ViewModelDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F51A4E511AC8FA400050E5BD /* Build configuration list for PBXNativeTarget "ViewModel" */;
+			buildConfigurationList = F51A4E511AC8FA400050E5BD /* Build configuration list for PBXNativeTarget "ViewModelDemo" */;
 			buildPhases = (
 				89523A8BA1695251E1AC6C84 /* Check Pods Manifest.lock */,
 				F51A4E2E1AC8FA400050E5BD /* Sources */,
@@ -157,9 +166,9 @@
 			);
 			dependencies = (
 			);
-			name = ViewModel;
+			name = ViewModelDemo;
 			productName = ViewModel;
-			productReference = F51A4E321AC8FA400050E5BD /* ViewModel.app */;
+			productReference = F51A4E321AC8FA400050E5BD /* ViewModelDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F51A4E461AC8FA400050E5BD /* ViewModelTests */ = {
@@ -198,7 +207,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F51A4E2D1AC8FA400050E5BD /* Build configuration list for PBXProject "ViewModel" */;
+			buildConfigurationList = F51A4E2D1AC8FA400050E5BD /* Build configuration list for PBXProject "ViewModelDemo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -211,7 +220,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F51A4E311AC8FA400050E5BD /* ViewModel */,
+				F51A4E311AC8FA400050E5BD /* ViewModelDemo */,
 				F51A4E461AC8FA400050E5BD /* ViewModelTests */,
 			);
 		};
@@ -222,10 +231,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5B6EB421AC8FC77001ECD51 /* BoxView.xib in Resources */,
-				F51A4E3D1AC8FA400050E5BD /* Main.storyboard in Resources */,
-				F51A4E421AC8FA400050E5BD /* LaunchScreen.xib in Resources */,
-				F51A4E3F1AC8FA400050E5BD /* Images.xcassets in Resources */,
+				F565ED411AC93230003009C4 /* LaunchScreen.xib in Resources */,
+				F565ED421AC93230003009C4 /* Main.storyboard in Resources */,
+				F565ED2E1AC92D6B003009C4 /* Images.xcassets in Resources */,
+				F565ED341AC92E3E003009C4 /* Pods.debug.xcconfig in Resources */,
+				F565ED351AC92E3E003009C4 /* Pods.release.xcconfig in Resources */,
+				F565ED2D1AC92D6B003009C4 /* BoxView.xib in Resources */,
+				F565ED311AC92DCD003009C4 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +278,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViewModel/Pods-ViewModel-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		96564DCC504E6D5B25B55FDF /* Copy Pods Resources */ = {
@@ -281,7 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ViewModel/Pods-ViewModel-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -291,8 +303,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F51A4E3A1AC8FA400050E5BD /* ViewController.swift in Sources */,
-				F51A4E381AC8FA400050E5BD /* AppDelegate.swift in Sources */,
+				F565ED2C1AC92D6B003009C4 /* AppDelegate.swift in Sources */,
+				F565ED2F1AC92D6B003009C4 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,26 +321,26 @@
 /* Begin PBXTargetDependency section */
 		F51A4E491AC8FA400050E5BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F51A4E311AC8FA400050E5BD /* ViewModel */;
+			target = F51A4E311AC8FA400050E5BD /* ViewModelDemo */;
 			targetProxy = F51A4E481AC8FA400050E5BD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F51A4E3B1AC8FA400050E5BD /* Main.storyboard */ = {
+		F565ED3B1AC93226003009C4 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F51A4E3C1AC8FA400050E5BD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F51A4E401AC8FA400050E5BD /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F51A4E411AC8FA400050E5BD /* Base */,
+				F565ED3C1AC93226003009C4 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		F565ED3D1AC93226003009C4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F565ED3E1AC93226003009C4 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -415,23 +427,23 @@
 		};
 		F51A4E521AC8FA400050E5BD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BF40CE2110C0DA4CC969EB58 /* Pods-ViewModel.debug.xcconfig */;
+			baseConfigurationReference = F565ED321AC92E3E003009C4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ViewModel/Info.plist;
+				INFOPLIST_FILE = ViewModelDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ViewModelDemo;
 			};
 			name = Debug;
 		};
 		F51A4E531AC8FA400050E5BD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3759363DA54D9362D8DCF87F /* Pods-ViewModel.release.xcconfig */;
+			baseConfigurationReference = F565ED331AC92E3E003009C4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ViewModel/Info.plist;
+				INFOPLIST_FILE = ViewModelDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ViewModelDemo;
 			};
 			name = Release;
 		};
@@ -450,7 +462,7 @@
 				INFOPLIST_FILE = ViewModelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViewModel.app/ViewModel";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViewModelDemo.app/ViewModelDemo";
 			};
 			name = Debug;
 		};
@@ -465,14 +477,14 @@
 				INFOPLIST_FILE = ViewModelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViewModel.app/ViewModel";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViewModelDemo.app/ViewModelDemo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F51A4E2D1AC8FA400050E5BD /* Build configuration list for PBXProject "ViewModel" */ = {
+		F51A4E2D1AC8FA400050E5BD /* Build configuration list for PBXProject "ViewModelDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F51A4E4F1AC8FA400050E5BD /* Debug */,
@@ -481,7 +493,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F51A4E511AC8FA400050E5BD /* Build configuration list for PBXNativeTarget "ViewModel" */ = {
+		F51A4E511AC8FA400050E5BD /* Build configuration list for PBXNativeTarget "ViewModelDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F51A4E521AC8FA400050E5BD /* Debug */,
