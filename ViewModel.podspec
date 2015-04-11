@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ViewModel"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Library for MVC-ViewModel implementation on iOS application."
 
   s.description  = <<-DESC
