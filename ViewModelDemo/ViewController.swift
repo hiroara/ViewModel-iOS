@@ -18,14 +18,14 @@ class Model {
     }
 }
 
-class ViewModel: VMViewModel {
+@objc class ViewModel: VMViewModel {
     var model: Model
     var title: String?
     var body: String?
     var nibName: String { return "BoxView" }
 
     required init(model: AnyObject) {
-        self.model = model as Model
+        self.model = model as! Model
         self.reload()
     }
     func reload() -> Self {

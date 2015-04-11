@@ -13,9 +13,6 @@
 		F565ED2D1AC92D6B003009C4 /* BoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F565ED291AC92D6B003009C4 /* BoxView.xib */; };
 		F565ED2E1AC92D6B003009C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F565ED2A1AC92D6B003009C4 /* Images.xcassets */; };
 		F565ED2F1AC92D6B003009C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F565ED2B1AC92D6B003009C4 /* ViewController.swift */; };
-		F565ED311AC92DCD003009C4 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F565ED301AC92DCD003009C4 /* Info.plist */; };
-		F565ED341AC92E3E003009C4 /* Pods.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F565ED321AC92E3E003009C4 /* Pods.debug.xcconfig */; };
-		F565ED351AC92E3E003009C4 /* Pods.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F565ED331AC92E3E003009C4 /* Pods.release.xcconfig */; };
 		F565ED411AC93230003009C4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F565ED3B1AC93226003009C4 /* LaunchScreen.xib */; };
 		F565ED421AC93230003009C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F565ED3D1AC93226003009C4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -195,7 +192,7 @@
 		F51A4E2A1AC8FA400050E5BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0620;
+				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Hiroki Arai";
 				TargetAttributes = {
 					F51A4E311AC8FA400050E5BD = {
@@ -234,10 +231,7 @@
 				F565ED411AC93230003009C4 /* LaunchScreen.xib in Resources */,
 				F565ED421AC93230003009C4 /* Main.storyboard in Resources */,
 				F565ED2E1AC92D6B003009C4 /* Images.xcassets in Resources */,
-				F565ED341AC92E3E003009C4 /* Pods.debug.xcconfig in Resources */,
-				F565ED351AC92E3E003009C4 /* Pods.release.xcconfig in Resources */,
 				F565ED2D1AC92D6B003009C4 /* BoxView.xib in Resources */,
-				F565ED311AC92DCD003009C4 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

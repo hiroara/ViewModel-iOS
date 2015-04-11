@@ -31,15 +31,15 @@ public struct VMComposer<C: UIViewController> {
 
 public extension UIViewController {
     var viewModel: VMViewModel? {
-        get { return (self.view as VMView).viewModel }
-        set { (self.view as VMView).viewModel = newValue }
+        get { return (self.view as! VMView).viewModel }
+        set { (self.view as! VMView).viewModel = newValue }
     }
 
     func reload(fromModel: Bool) -> Self {
         if fromModel {
             self.viewModel?.reload()
         }
-        (self.view as VMView).reload()
+        (self.view as! VMView).reload()
         return self
     }
 }
