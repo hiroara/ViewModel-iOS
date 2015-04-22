@@ -23,6 +23,7 @@ class Model {
     var title: String?
     var body: String?
     var nibName: String { return "BoxView" }
+    weak var delegate: VMView?
 
     required init(model: AnyObject) {
         self.model = model as! Model

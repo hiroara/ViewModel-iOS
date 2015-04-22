@@ -2,7 +2,7 @@
 //  ViewModelTests.swift
 //  ViewModelTests
 //
-//  Created by Hiroki Arai on 3/30/15.
+//  Created by Hiroki Arai on 4/22/15.
 //  Copyright (c) 2015 Hiroki Arai. All rights reserved.
 //
 

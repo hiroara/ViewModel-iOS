@@ -10,14 +10,16 @@ import UIKit
 
 @objc public protocol VMViewModel {
     var nibName: String { get }
+    weak var delegate: VMView? { get set }
     init(model: AnyObject)
     func reload() -> Self
     func apply() -> AnyObject
 }
 
 @objc public protocol VMView {
-    func reload() -> Self
     var viewModel: VMViewModel? { get set }
+    func reload() -> Self
+    optional func didChangeViewModel(viewModel: VMViewModel, key: String)
 }
 
 public struct VMComposer<C: UIViewController> {
@@ -32,7 +34,11 @@ public struct VMComposer<C: UIViewController> {
 public extension UIViewController {
     var viewModel: VMViewModel? {
         get { return (self.view as! VMView).viewModel }
-        set { (self.view as! VMView).viewModel = newValue }
+        set {
+            let vmView = self.view as! VMView
+            vmView.viewModel = newValue
+            newValue?.delegate = vmView
+        }
     }
 
     func reload(fromModel: Bool) -> Self {

@@ -7,8 +7,3 @@ pod 'ViewModel', path: './'
 
 target 'ViewModelDemo' do
 end
-
-target 'ViewModelTests' do
-
-end
-

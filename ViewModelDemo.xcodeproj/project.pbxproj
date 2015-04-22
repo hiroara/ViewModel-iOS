@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B6C1D9358C6DE09EAD186D2B /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244F1AA6666F7B45E5B0AFEC /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		F51A4E4E1AC8FA400050E5BD /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51A4E4D1AC8FA400050E5BD /* ViewModelTests.swift */; };
 		F565ED2C1AC92D6B003009C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F565ED281AC92D6B003009C4 /* AppDelegate.swift */; };
 		F565ED2D1AC92D6B003009C4 /* BoxView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F565ED291AC92D6B003009C4 /* BoxView.xib */; };
 		F565ED2E1AC92D6B003009C4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F565ED2A1AC92D6B003009C4 /* Images.xcassets */; };
@@ -17,23 +16,10 @@
 		F565ED421AC93230003009C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F565ED3D1AC93226003009C4 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		F51A4E481AC8FA400050E5BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F51A4E2A1AC8FA400050E5BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F51A4E311AC8FA400050E5BD;
-			remoteInfo = ViewModel;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		244F1AA6666F7B45E5B0AFEC /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A41CF1974FF549B4B99170E3 /* Pods_ViewModel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViewModel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51A4E321AC8FA400050E5BD /* ViewModelDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViewModelDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F51A4E471AC8FA400050E5BD /* ViewModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F51A4E4C1AC8FA400050E5BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F51A4E4D1AC8FA400050E5BD /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
 		F565ED241AC92D39003009C4 /* Pods-ViewModelDemo.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ViewModelDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViewModelDemo/Pods-ViewModelDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F565ED251AC92D39003009C4 /* Pods-ViewModelDemo.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-ViewModelDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViewModelDemo/Pods-ViewModelDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F565ED281AC92D6B003009C4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ViewModelDemo/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -53,13 +39,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C1D9358C6DE09EAD186D2B /* Pods.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F51A4E441AC8FA400050E5BD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				F51A4E341AC8FA400050E5BD /* ViewModelDemo */,
-				F51A4E4A1AC8FA400050E5BD /* ViewModelTests */,
 				F51A4E331AC8FA400050E5BD /* Products */,
 				40DA0D926C6D8A8B599068AB /* Pods */,
 				A1E2EFDD00F87167011171CB /* Frameworks */,
@@ -101,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				F51A4E321AC8FA400050E5BD /* ViewModelDemo.app */,
-				F51A4E471AC8FA400050E5BD /* ViewModelTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,23 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				F565ED301AC92DCD003009C4 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F51A4E4A1AC8FA400050E5BD /* ViewModelTests */ = {
-			isa = PBXGroup;
-			children = (
-				F51A4E4D1AC8FA400050E5BD /* ViewModelTests.swift */,
-				F51A4E4B1AC8FA400050E5BD /* Supporting Files */,
-			);
-			path = ViewModelTests;
-			sourceTree = "<group>";
-		};
-		F51A4E4B1AC8FA400050E5BD /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F51A4E4C1AC8FA400050E5BD /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -168,24 +128,6 @@
 			productReference = F51A4E321AC8FA400050E5BD /* ViewModelDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F51A4E461AC8FA400050E5BD /* ViewModelTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F51A4E541AC8FA400050E5BD /* Build configuration list for PBXNativeTarget "ViewModelTests" */;
-			buildPhases = (
-				F51A4E431AC8FA400050E5BD /* Sources */,
-				F51A4E441AC8FA400050E5BD /* Frameworks */,
-				F51A4E451AC8FA400050E5BD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F51A4E491AC8FA400050E5BD /* PBXTargetDependency */,
-			);
-			name = ViewModelTests;
-			productName = ViewModelTests;
-			productReference = F51A4E471AC8FA400050E5BD /* ViewModelTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +139,6 @@
 				TargetAttributes = {
 					F51A4E311AC8FA400050E5BD = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					F51A4E461AC8FA400050E5BD = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = F51A4E311AC8FA400050E5BD;
 					};
 				};
 			};
@@ -218,7 +156,6 @@
 			projectRoot = "";
 			targets = (
 				F51A4E311AC8FA400050E5BD /* ViewModelDemo */,
-				F51A4E461AC8FA400050E5BD /* ViewModelTests */,
 			);
 		};
 /* End PBXProject section */
@@ -232,13 +169,6 @@
 				F565ED421AC93230003009C4 /* Main.storyboard in Resources */,
 				F565ED2E1AC92D6B003009C4 /* Images.xcassets in Resources */,
 				F565ED2D1AC92D6B003009C4 /* BoxView.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F51A4E451AC8FA400050E5BD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,23 +232,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F51A4E431AC8FA400050E5BD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F51A4E4E1AC8FA400050E5BD /* ViewModelTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		F51A4E491AC8FA400050E5BD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F51A4E311AC8FA400050E5BD /* ViewModelDemo */;
-			targetProxy = F51A4E481AC8FA400050E5BD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F565ED3B1AC93226003009C4 /* LaunchScreen.xib */ = {
@@ -441,40 +355,6 @@
 			};
 			name = Release;
 		};
-		F51A4E551AC8FA400050E5BD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ViewModelTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViewModelDemo.app/ViewModelDemo";
-			};
-			name = Debug;
-		};
-		F51A4E561AC8FA400050E5BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ViewModelTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViewModelDemo.app/ViewModelDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -492,15 +372,6 @@
 			buildConfigurations = (
 				F51A4E521AC8FA400050E5BD /* Debug */,
 				F51A4E531AC8FA400050E5BD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F51A4E541AC8FA400050E5BD /* Build configuration list for PBXNativeTarget "ViewModelTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F51A4E551AC8FA400050E5BD /* Debug */,
-				F51A4E561AC8FA400050E5BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
