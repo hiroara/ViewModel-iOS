@@ -3,6 +3,8 @@
 
 use_frameworks!
 
+xcodeproj './ViewModelDemo.xcodeproj'
+
 pod 'ViewModel', path: './'
 
 target 'ViewModelDemo' do
