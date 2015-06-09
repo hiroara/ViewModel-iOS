@@ -8,27 +8,20 @@
 
 import UIKit
 
-@objc public protocol VMViewModel {
+public protocol VMViewModel: class {
     var nibName: String { get }
+    var bundle: NSBundle? { get }
     weak var delegate: VMView? { get set }
     init(model: AnyObject)
     func reload() -> Self
     func apply() -> AnyObject
+    func fieldChangeNamed(name: String, value: AnyObject?)
 }
 
-@objc public protocol VMView {
+public protocol VMView: class {
     var viewModel: VMViewModel? { get set }
     func reload() -> Self
-    optional func didChangeViewModel(viewModel: VMViewModel, key: String)
-}
-
-public struct VMComposer<C: UIViewController> {
-    public init() {}
-    public func composeWith(#viewModel: VMViewModel) -> C {
-        let controller = C(nibName: viewModel.nibName, bundle: nil)
-        controller.viewModel = viewModel
-        return controller
-    }
+    func didChangeViewModel(viewModel: VMViewModel, key: String)
 }
 
 public extension UIViewController {
@@ -48,4 +41,34 @@ public extension UIViewController {
         (self.view as! VMView).reload()
         return self
     }
+}
+
+
+// MARK: Composition Functions
+
+public func composeControllerWith<C: UIViewController>(#viewModel: VMViewModel) -> C {
+    let controller = C(nibName: viewModel.nibName, bundle: viewModel.bundle)
+    controller.viewModel = viewModel
+    return controller
+}
+public func composeViewWith<V: VMView>(#viewModel: VMViewModel, index: Int, owner ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> V {
+    let nib = UINib(nibName: viewModel.nibName, bundle: viewModel.bundle)
+    let view = nib.instantiateWithOwner(ownerOrNil, options: optionsOrNil)[index] as! V
+    view.viewModel = viewModel
+    return view
+}
+public func composeViewWith<V: VMView, VM: VMViewModel>(#model: AnyObject, index: Int, owner ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> V {
+    let viewModel = VM(model: model)
+    return composeViewWith(viewModel: viewModel, index, owner: ownerOrNil, options: optionsOrNil)
+}
+
+
+// MARK: Other Functions
+
+public func reloadView<V: VMView>(view: V, fromModel: Bool = false) -> V {
+    if fromModel {
+        view.viewModel?.reload()
+    }
+    view.reload()
+    return view
 }

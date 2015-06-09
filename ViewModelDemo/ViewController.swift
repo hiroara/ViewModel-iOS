@@ -18,11 +18,12 @@ class Model {
     }
 }
 
-@objc class ViewModel: VMViewModel {
+class ViewModel: VMViewModel {
     var model: Model
     var title: String?
     var body: String?
     var nibName: String { return "BoxView" }
+    var bundle: NSBundle? = nil
     weak var delegate: VMView?
 
     required init(model: AnyObject) {
@@ -43,6 +44,7 @@ class Model {
         }
         return self.model
     }
+    func fieldChangeNamed(name: String, value: AnyObject?) {}
 }
 
 class BoxView: UIView, VMView {
@@ -58,14 +60,13 @@ class BoxView: UIView, VMView {
         }
         return self
     }
+    func didChangeViewModel(viewModel: VMViewModel, key: String) {}
 }
 
 class BoxViewController: UIViewController {
     class func composeWith(#model: Model) -> BoxViewController {
-        let viewModel = ViewModel(model: model)
-        let controller = VMComposer<BoxViewController>().composeWith(viewModel: viewModel)
-        controller.reload(true)
-        return controller
+        let controller: BoxViewController = composeControllerWith(viewModel: ViewModel(model: model))
+        return controller.reload(true)
     }
 }
 
