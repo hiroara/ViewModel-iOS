@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "ViewModel"
-  s.version      = "0.0.3"
+  s.version      = "0.0.5"
   s.summary      = "Library for MVC-ViewModel implementation on iOS application."
 
   s.description  = <<-DESC
@@ -73,7 +73,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/hiroara/ViewModel-iOS.git", :tag => "v0.0.3" }
+  s.source       = { :git => "https://github.com/hiroara/ViewModel-iOS.git", :tag => "v0.0.5" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
