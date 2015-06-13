@@ -26,7 +26,7 @@ public protocol VMView: class {
 
 public extension UIViewController {
     var viewModel: VMViewModel? {
-        get { return (self.view as! VMView).viewModel }
+        get { return (self.view as? VMView)?.viewModel }
         set {
             let vmView = self.view as! VMView
             vmView.viewModel = newValue
@@ -46,20 +46,16 @@ public extension UIViewController {
 
 // MARK: Composition Functions
 
-public func composeControllerWith<C: UIViewController>(#viewModel: VMViewModel) -> C {
-    let controller = C(nibName: viewModel.nibName, bundle: viewModel.bundle)
+public func composeControllerWithViewModel(viewModel: VMViewModel) -> UIViewController {
+    let controller = UIViewController(nibName: viewModel.nibName, bundle: viewModel.bundle)
     controller.viewModel = viewModel
     return controller
 }
-public func composeViewWith<V: VMView>(#viewModel: VMViewModel, index: Int, owner ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> V {
+public func composeViewWithViewModel(viewModel: VMViewModel, index: Int, owner ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> VMView {
     let nib = UINib(nibName: viewModel.nibName, bundle: viewModel.bundle)
-    let view = nib.instantiateWithOwner(ownerOrNil, options: optionsOrNil)[index] as! V
+    let view = nib.instantiateWithOwner(ownerOrNil, options: optionsOrNil)[index] as! VMView
     view.viewModel = viewModel
     return view
-}
-public func composeViewWith<V: VMView, VM: VMViewModel>(#model: AnyObject, index: Int, owner ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> V {
-    let viewModel = VM(model: model)
-    return composeViewWith(viewModel: viewModel, index, owner: ownerOrNil, options: optionsOrNil)
 }
 
 

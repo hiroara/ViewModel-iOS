@@ -65,7 +65,7 @@ class BoxView: UIView, VMView {
 
 class BoxViewController: UIViewController {
     class func composeWith(#model: Model) -> BoxViewController {
-        let controller: BoxViewController = composeControllerWith(viewModel: ViewModel(model: model))
+        let controller = composeControllerWithViewModel(ViewModel(model: model)) as! BoxViewController
         return controller.reload(true)
     }
 }
