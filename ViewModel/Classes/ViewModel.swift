@@ -10,6 +10,7 @@ import UIKit
 
 public protocol VMViewModel: class {
     var nibName: String { get }
+    var nibIndex: Int { get }
     var bundle: NSBundle? { get }
     weak var delegate: VMView? { get set }
     init(model: AnyObject)
@@ -26,7 +27,7 @@ public protocol VMView: class {
 
 public extension UIViewController {
     var viewModel: VMViewModel? {
-        get { return (self.view as! VMView).viewModel }
+        get { return (self.view as? VMView)?.viewModel }
         set {
             let vmView = self.view as! VMView
             vmView.viewModel = newValue
@@ -41,25 +42,22 @@ public extension UIViewController {
         (self.view as! VMView).reload()
         return self
     }
+    
+    public class func instantiateWithViewModel(viewModel: VMViewModel) -> Self {
+        let controller = self(nibName: viewModel.nibName, bundle: viewModel.bundle)
+        controller.viewModel = viewModel
+        return controller.reload(true)
+    }
 }
 
 
 // MARK: Composition Functions
 
-public func composeControllerWith<C: UIViewController>(#viewModel: VMViewModel) -> C {
-    let controller = C(nibName: viewModel.nibName, bundle: viewModel.bundle)
-    controller.viewModel = viewModel
-    return controller
-}
-public func composeViewWith<V: VMView>(#viewModel: VMViewModel, index: Int, owner ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> V {
+public func composeViewWithViewModel(viewModel: VMViewModel, owner ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> VMView {
     let nib = UINib(nibName: viewModel.nibName, bundle: viewModel.bundle)
-    let view = nib.instantiateWithOwner(ownerOrNil, options: optionsOrNil)[index] as! V
+    let view = nib.instantiateWithOwner(ownerOrNil, options: optionsOrNil)[viewModel.nibIndex] as! VMView
     view.viewModel = viewModel
     return view
-}
-public func composeViewWith<V: VMView, VM: VMViewModel>(#model: AnyObject, index: Int, owner ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> V {
-    let viewModel = VM(model: model)
-    return composeViewWith(viewModel: viewModel, index, owner: ownerOrNil, options: optionsOrNil)
 }
 
 

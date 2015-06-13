@@ -1,5 +1,5 @@
 PODS:
-  - ViewModel (0.0.3)
+  - ViewModel (0.0.5)
 
 DEPENDENCIES:
   - ViewModel (from `./`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "./"
 
 SPEC CHECKSUMS:
-  ViewModel: 8d109a5f0113d29289e810be4d27a1e4d08747ad
+  ViewModel: 1565da2a996f4299d608803359358075d8a7ae0c
 
 COCOAPODS: 0.36.1

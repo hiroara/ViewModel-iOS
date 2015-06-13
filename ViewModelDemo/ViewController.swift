@@ -23,6 +23,7 @@ class ViewModel: VMViewModel {
     var title: String?
     var body: String?
     var nibName: String { return "BoxView" }
+    var nibIndex: Int { return 0 }
     var bundle: NSBundle? = nil
     weak var delegate: VMView?
 
@@ -64,10 +65,6 @@ class BoxView: UIView, VMView {
 }
 
 class BoxViewController: UIViewController {
-    class func composeWith(#model: Model) -> BoxViewController {
-        let controller: BoxViewController = composeControllerWith(viewModel: ViewModel(model: model))
-        return controller.reload(true)
-    }
 }
 
 class ViewController: UIViewController {
@@ -77,7 +74,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let model = Model(title: "This is title", body: "This is body.\n\nAwesome text!")
 
-        let controller = BoxViewController.composeWith(model: model)
+        let controller = BoxViewController.instantiateWithViewModel(ViewModel(model: model))
         controller.view.frame = self.view.frame
         self.view.addSubview(controller.view)
         self.addChildViewController(controller)
