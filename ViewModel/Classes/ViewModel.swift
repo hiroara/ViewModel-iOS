@@ -19,10 +19,32 @@ public protocol VMViewModel: class {
     func fieldChangeNamed(name: String, value: AnyObject?)
 }
 
+
+public extension VMViewModel {
+    public func composeViewWithOwner(ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> VMView {
+        let nib = UINib(nibName: self.nibName, bundle: self.bundle)
+        let view = nib.instantiateWithOwner(ownerOrNil, options: optionsOrNil)[self.nibIndex] as! VMView
+        view.viewModel = self
+        return view
+    }
+}
+
+
 public protocol VMView: class {
     var viewModel: VMViewModel? { get set }
     func reload() -> Self
     func didChangeViewModel(viewModel: VMViewModel, key: String)
+}
+
+// MARK: Other Functions
+
+public extension VMView {
+    public func reload(fromModel: Bool = false) -> Self {
+        if fromModel {
+            self.viewModel?.reload()
+        }
+        return self.reload()
+    }
 }
 
 public extension UIViewController {
@@ -44,29 +66,9 @@ public extension UIViewController {
     }
     
     public class func instantiateWithViewModel(viewModel: VMViewModel) -> Self {
-        let controller = self(nibName: viewModel.nibName, bundle: viewModel.bundle)
+        let controller = self.init(nibName: viewModel.nibName, bundle: viewModel.bundle)
         controller.viewModel = viewModel
         return controller.reload(true)
     }
 }
 
-
-// MARK: Composition Functions
-
-public func composeViewWithViewModel(viewModel: VMViewModel, owner ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> VMView {
-    let nib = UINib(nibName: viewModel.nibName, bundle: viewModel.bundle)
-    let view = nib.instantiateWithOwner(ownerOrNil, options: optionsOrNil)[viewModel.nibIndex] as! VMView
-    view.viewModel = viewModel
-    return view
-}
-
-
-// MARK: Other Functions
-
-public func reloadView<V: VMView>(view: V, fromModel: Bool = false) -> V {
-    if fromModel {
-        view.viewModel?.reload()
-    }
-    view.reload()
-    return view
-}
