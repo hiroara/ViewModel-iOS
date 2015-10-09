@@ -134,6 +134,7 @@
 		F51A4E2A1AC8FA400050E5BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Hiroki Arai";
 				TargetAttributes = {

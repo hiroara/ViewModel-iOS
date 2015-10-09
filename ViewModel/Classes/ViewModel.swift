@@ -8,8 +8,9 @@
 
 import UIKit
 
-public protocol VMViewModel: class {
+public protocol VMViewModelType: class {
     var nibName: String { get }
+    var nibIndex: Int { get }
     var bundle: NSBundle? { get }
     weak var delegate: VMView? { get set }
     init(model: AnyObject)
@@ -18,10 +19,44 @@ public protocol VMViewModel: class {
     func fieldChangeNamed(name: String, value: AnyObject?)
 }
 
+public class VMViewModel: VMViewModelType {
+    public var nibName: String { fatalError("Must be overridden") }
+    public var nibIndex: Int = 0
+    public var bundle: NSBundle? = nil
+    public weak var delegate: VMView?
+    public required init(model: AnyObject) {}
+    public func reload() -> Self { return self }
+    public func apply() -> AnyObject { fatalError("Must be overridden") }
+    public func fieldChangeNamed(name: String, value: AnyObject?) {}
+}
+
+
+public extension VMViewModel {
+    public var nib: UINib { return UINib(nibName: self.nibName, bundle: self.bundle) }
+
+    public func composeViewWithOwner(ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> VMView {
+        let view = self.nib.instantiateWithOwner(ownerOrNil, options: optionsOrNil)[self.nibIndex] as! VMView
+        view.viewModel = self
+        return view
+    }
+}
+
+
 public protocol VMView: class {
     var viewModel: VMViewModel? { get set }
     func reload() -> Self
     func didChangeViewModel(viewModel: VMViewModel, key: String)
+}
+
+// MARK: Other Functions
+
+public extension VMView {
+    public func reload(fromModel: Bool = false) -> Self {
+        if fromModel {
+            self.viewModel?.reload()
+        }
+        return self.reload()
+    }
 }
 
 public extension UIViewController {
@@ -41,30 +76,10 @@ public extension UIViewController {
         (self.view as! VMView).reload()
         return self
     }
-}
-
-
-// MARK: Composition Functions
-
-public func composeControllerWithViewModel(viewModel: VMViewModel) -> UIViewController {
-    let controller = UIViewController(nibName: viewModel.nibName, bundle: viewModel.bundle)
-    controller.viewModel = viewModel
-    return controller
-}
-public func composeViewWithViewModel(viewModel: VMViewModel, index: Int, owner ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> VMView {
-    let nib = UINib(nibName: viewModel.nibName, bundle: viewModel.bundle)
-    let view = nib.instantiateWithOwner(ownerOrNil, options: optionsOrNil)[index] as! VMView
-    view.viewModel = viewModel
-    return view
-}
-
-
-// MARK: Other Functions
-
-public func reloadView<V: VMView>(view: V, fromModel: Bool = false) -> V {
-    if fromModel {
-        view.viewModel?.reload()
+    
+    public class func instantiateWithViewModel(viewModel: VMViewModel) -> Self {
+        let controller = self.init(nibName: viewModel.nibName, bundle: viewModel.bundle)
+        controller.viewModel = viewModel
+        return controller.reload(true)
     }
-    view.reload()
-    return view
 }

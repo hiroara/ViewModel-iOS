@@ -22,20 +22,19 @@ class ViewModel: VMViewModel {
     var model: Model
     var title: String?
     var body: String?
-    var nibName: String { return "BoxView" }
-    var bundle: NSBundle? = nil
-    weak var delegate: VMView?
+    override var nibName: String { return "BoxView" }
 
     required init(model: AnyObject) {
         self.model = model as! Model
+        super.init(model: model)
         self.reload()
     }
-    func reload() -> Self {
+    override func reload() -> Self {
         self.title = model.title
         self.body = model.body
         return self
     }
-    func apply() -> AnyObject {
+    override func apply() -> AnyObject {
         if let title = self.title {
             self.model.title = title
         }
@@ -44,7 +43,6 @@ class ViewModel: VMViewModel {
         }
         return self.model
     }
-    func fieldChangeNamed(name: String, value: AnyObject?) {}
 }
 
 class BoxView: UIView, VMView {
@@ -64,10 +62,6 @@ class BoxView: UIView, VMView {
 }
 
 class BoxViewController: UIViewController {
-    class func composeWith(#model: Model) -> BoxViewController {
-        let controller = composeControllerWithViewModel(ViewModel(model: model)) as! BoxViewController
-        return controller.reload(true)
-    }
 }
 
 class ViewController: UIViewController {
@@ -77,7 +71,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let model = Model(title: "This is title", body: "This is body.\n\nAwesome text!")
 
-        let controller = BoxViewController.composeWith(model: model)
+        let controller = BoxViewController.instantiateWithViewModel(ViewModel(model: model))
         controller.view.frame = self.view.frame
         self.view.addSubview(controller.view)
         self.addChildViewController(controller)
