@@ -22,21 +22,19 @@ class ViewModel: VMViewModel {
     var model: Model
     var title: String?
     var body: String?
-    var nibName: String { return "BoxView" }
-    var nibIndex: Int { return 0 }
-    var bundle: NSBundle? = nil
-    weak var delegate: VMView?
+    override var nibName: String { return "BoxView" }
 
     required init(model: AnyObject) {
         self.model = model as! Model
+        super.init(model: model)
         self.reload()
     }
-    func reload() -> Self {
+    override func reload() -> Self {
         self.title = model.title
         self.body = model.body
         return self
     }
-    func apply() -> AnyObject {
+    override func apply() -> AnyObject {
         if let title = self.title {
             self.model.title = title
         }
@@ -45,7 +43,6 @@ class ViewModel: VMViewModel {
         }
         return self.model
     }
-    func fieldChangeNamed(name: String, value: AnyObject?) {}
 }
 
 class BoxView: UIView, VMView {

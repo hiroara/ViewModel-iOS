@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol VMViewModel: class {
+public protocol VMViewModelType: class {
     var nibName: String { get }
     var nibIndex: Int { get }
     var bundle: NSBundle? { get }
@@ -19,11 +19,23 @@ public protocol VMViewModel: class {
     func fieldChangeNamed(name: String, value: AnyObject?)
 }
 
+public class VMViewModel: VMViewModelType {
+    public var nibName: String { fatalError("Must be overridden") }
+    public var nibIndex: Int = 0
+    public var bundle: NSBundle? = nil
+    public weak var delegate: VMView?
+    public required init(model: AnyObject) {}
+    public func reload() -> Self { return self }
+    public func apply() -> AnyObject { fatalError("Must be overridden") }
+    public func fieldChangeNamed(name: String, value: AnyObject?) {}
+}
+
 
 public extension VMViewModel {
+    public var nib: UINib { return UINib(nibName: self.nibName, bundle: self.bundle) }
+
     public func composeViewWithOwner(ownerOrNil: AnyObject? = nil, options optionsOrNil: [NSObject : AnyObject]? = nil) -> VMView {
-        let nib = UINib(nibName: self.nibName, bundle: self.bundle)
-        let view = nib.instantiateWithOwner(ownerOrNil, options: optionsOrNil)[self.nibIndex] as! VMView
+        let view = self.nib.instantiateWithOwner(ownerOrNil, options: optionsOrNil)[self.nibIndex] as! VMView
         view.viewModel = self
         return view
     }
